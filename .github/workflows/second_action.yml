@@ -28,7 +28,7 @@ jobs:                  # Groups together all the jobs that run in the workflow
                     - name: Run tests
                       run: bats -v
                     - name: Build project
-                      run: npm run build
+                      run: echo "nothing to build"
                     - name: Deploy
                       run: echo "Deploying..."
                     - name: Testing the build
