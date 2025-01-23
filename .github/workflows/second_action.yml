@@ -1,17 +1,17 @@
-name: Test
-on: push
-jobs:
-    test:
-        runs-on: ubuntu-latest
-        steps:
-            - name: Get code
-              uses: actions/checkout@v4
+name: Test             #  The name of the workflow as it will appear in the "Actions" tab of the GitHub repository
+on: push               #Specifies the trigger for this workflow
+jobs:                  # Groups together all the jobs that run in the workflow
+    test:                  # name of the job
+        runs-on: ubuntu-latest      #Configures the job to run on the latest version of an Ubuntu Linux runner
+        steps:                       #Groups together all the steps that run in the test job
+            - name: Get code                    
+              uses: actions/checkout@v4         #The uses keyword specifies that this step will run v4 of the actions/checkout action. 
             - name: Install NodeJS
-              uses: actions/setup-node@v4
+              uses: actions/setup-node@v4        #This step uses the actions/setup-node@v4 action to install the specified version of the Node.js.
               with: 
                 node-version: '20'
-            - name: Install Dependencies
-              run: npm install -g bats
-            - name: Run tests
-              run: bats -v
+            - name: Install Dependencies      #name of the step
+              run: npm install -g bats        #The run keyword tells the job to execute a command on the runner. 
+            - name: Run tests                 #name of the step
+              run: bats -v                    #the bats command with a parameter that outputs the software version.
        
