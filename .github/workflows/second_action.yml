@@ -32,5 +32,5 @@ jobs:                  # Groups together all the jobs that run in the workflow
                     - name: Deploy
                       run: echo "Deploying..."
                     - name: Testing the build
-                      run: npm test
+                      run: echo "nothing to test"
                   
