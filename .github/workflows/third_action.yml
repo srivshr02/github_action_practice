@@ -15,7 +15,7 @@ jobs:                  # Groups together all the jobs that run in the workflow
             - name: Run tests                 #name of the step
               run: bats -v                    #the bats command with a parameter that outputs the software version.
     deploy:
-                needs: Test
+                needs: test
                 runs-on: ubuntu-latest
                 steps:
                     - name: Getting code
