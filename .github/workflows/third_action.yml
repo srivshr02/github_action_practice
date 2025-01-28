@@ -1,5 +1,8 @@
 name: Test             #  The name of the workflow as it will appear in the "Actions" tab of the GitHub repository
-on: push               #Specifies the trigger for this workflow
+on: 
+  push:
+    branches:
+      - main               #Specifies the trigger for this workflow
 jobs:                  # Groups together all the jobs that run in the workflow
     test:                  # name of the job
         runs-on: ubuntu-latest      #Configures the job to run on the latest version of an Ubuntu Linux runner
