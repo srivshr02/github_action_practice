@@ -1,5 +1,8 @@
-name: Dependendent jobs
-on:  workflow_dispatch
+name: New_workflow
+on:  
+ push:
+  branches:
+    - dev
 jobs: 
     setup:
      runs-on: ubuntu-latest
